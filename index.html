@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Choose Your Beloved Player</title>
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
       rel="stylesheet"
@@ -263,8 +263,8 @@
           <section>
             <div class="grid grid-cols-1">
               <!-- Player List Start -->
-              <div class="bg-black rounded-lg h-96 sm:w-8/12">
-                <div class="p-4">
+              <div class="bg-black rounded-lg h-96 sm:w-10/12">
+                <div>
                   <h1 class="text-center font-bold text-2xl mt-6">Select-V</h1>
                   <img
                     class="w-3/4 mx-auto"
@@ -277,8 +277,8 @@
               <!-- Player List END -->
 
               <!-- Expense Calculator Section Start -->
-              <div class="bg-black rounded-lg mt-9 sm:w-8/12">
-                <div class="p-4">
+              <div class="bg-black rounded-lg mt-9 sm:w-10/12">
+                <div class="mb-5">
                   <h1 class="text-center font-bold text-2xl mt-10">Budget</h1>
                   <img
                     class="w-3/4 mx-auto"
@@ -286,61 +286,64 @@
                     alt=""
                   />
                 </div>
-                <div class="lg:p-3">
-                  <p class="mt-5 text-center">
-                    Per Player
-                    <span
-                      ><input
-                        class="text-black p-1 ml-1 rounded-md font-semibold w-2/4"
+                <div class="lg:p-2">
+                  <!-- per player expense section start -->
+                  <div>
+                    <div class="grid grid-cols-1 p-4 md:grid-cols-2 w-full">
+                      <p class="text-center">Per Player</p>
+                      <input
+                        class="w-full rounded-md text-black p-1"
                         type="number"
-                        name=""
                         id="per-player-expense"
-                    /></span>
-                  </p>
-                  <div class="text-center">
-                    <button
-                      id="btn-player-cost"
-                      class="px-5 py-2 btn-primary mt-5 font-semibold rounded-md"
-                    >
-                      Calculate
-                    </button>
-                  </div>
-                  <p class="mt-5 text-center font-semibold">
-                    Player Expense: $<span id="player-expense">00</span>
-                  </p>
+                      />
+                    </div>
 
-                  <p class="mt-5 text-center">
-                    Manager
-                    <span class="ml-3"
-                      ><input
-                        class="text-black p-1 rounded-md font-semibold w-2/4"
-                        type="number"
-                        name=""
-                        id="manager-expense"
-                    /></span>
-                  </p>
-                  <p class="mt-5 text-center">
-                    Coach
-                    <span class="ml-7"
-                      ><input
-                        class="text-black p-1 rounded-md font-semibold w-2/4"
-                        type="number"
-                        name=""
-                        id="coach-expense"
-                    /></span>
-                  </p>
-                  <div class="text-center">
-                    <button
-                      id="btn-total-cost"
-                      class="ml-7 px-5 py-2 btn-primary mt-5 font-semibold rounded-md"
+                    <div
+                      class="w-8/12 mx-auto bg-indigo-700 px-5 py-2 rounded-md text-center"
                     >
-                      Calculate Total
-                    </button>
+                      <button id="btn-player-cost" class="font-bold">
+                        Calculate
+                      </button>
+                    </div>
+                    <p class="mt-5 text-center font-semibold">
+                      Player Expense: $<span id="player-expense">00</span>
+                    </p>
                   </div>
-                  <p class="mt-5 mb-5 text-center font-bold">
-                    Total: <span class="text-orange-600">$</span
-                    ><span id="total-expense" class="text-orange-600">00</span>
-                  </p>
+                  <!-- per player expense section end-->
+                  <!-- coach and manager expense section start-->
+                  <div>
+                    <div class="grid grid-cols-1 p-4 md:grid-cols-2 w-full">
+                      <p class="text-center">Manager</p>
+                      <input
+                        class="w-full rounded-md text-black p-1"
+                        type="number"
+                        id="manager-expense"
+                      />
+                    </div>
+                    <div class="grid grid-cols-1 p-4 md:grid-cols-2 w-full">
+                      <p class="text-center">Coach</p>
+                      <input
+                        class="w-full rounded-md text-black p-1"
+                        type="number"
+                        id="coach-expense"
+                      />
+                    </div>
+                    <div
+                      class="w-8/12 mx-auto bg-indigo-700 px-5 py-2 rounded-md text-center"
+                    >
+                      <button id="btn-total-cost" class="font-bold">
+                        Calculate Total
+                      </button>
+                    </div>
+                    <p class="mt-5 mb-5 text-center font-bold">
+                      Total: <span class="text-orange-600">$</span
+                      ><span id="total-expense" class="text-orange-600"
+                        >00</span
+                      >
+                    </p>
+                  </div>
+
+                  <!-- coach and manager expense section end-->
                 </div>
               </div>
               <!-- Expense Calculator Section END -->
