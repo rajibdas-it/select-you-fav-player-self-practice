@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+
+.banner {
+  background-image: url(assets/banner.png);
+  height: 55vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner-left-side {
+  position: relative;
+}
+
+.banner-info {
+  background-image: url(/assets/title-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.banner-title {
+  font-family: "Berkshire Swash", cursive;
+  color: #ff5e19;
+}
