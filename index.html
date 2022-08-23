@@ -13,67 +13,272 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="w-10/12 mx-auto">
-    <!-- header -->
-    <header>
-      <!-- Banner Section Start -->
-      <div class="banner w-full grid grid-cols-3 gap-3 text-white">
-        <div class="banner-left-side relative">
-          <img
-            class="absolute bottom-0 left-0"
-            src="./assets/mbappe-bg.png"
-            alt=""
-          />
-          <img
-            class="absolute z-50 bottom-0 left-0"
-            src="./assets/mbappe-banner.png"
-            alt=""
-          />
-        </div>
-        <div class="mt-20 mb-20 mx-auto w-full">
-          <div class="banner-info text-white text-center">
-            <h1
-              class="banner-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-5"
-            >
-              Now Your Turn, Choose Your Beloved Player
-            </h1>
-            <p>Legends at the Back, pick your favourite player from here!</p>
+  <body class="bg-slate-800">
+    <div class="container w-10/12 mx-auto">
+      <!-- header -->
+      <header>
+        <!-- Banner Section Start -->
+        <div class="banner w-full grid grid-cols-3 gap-3 text-white">
+          <div class="banner-left-side relative">
+            <img
+              class="absolute bottom-0 left-0"
+              src="./assets/mbappe-bg.png"
+              alt=""
+            />
+            <img
+              class="absolute z-50 bottom-0 left-0"
+              src="./assets/mbappe-banner.png"
+              alt=""
+            />
+          </div>
+          <div class="mt-20 mb-20 mx-auto w-full">
+            <div class="banner-info text-white text-center">
+              <h1
+                class="banner-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-5"
+              >
+                Now Your Turn, Choose Your Beloved Player
+              </h1>
+              <p>Legends at the Back, pick your favourite player from here!</p>
+            </div>
+          </div>
+          <div class="relative">
+            <img
+              class="absolute z-20 top-5 right-16 sm:top-10 sm:right-28"
+              src="/assets/messi-top.png"
+              alt=""
+            />
+            <img
+              class="absolute top-16 right-3 sm:top-20 sm:right-12"
+              src="/assets/messi-banner.png"
+              alt=""
+            />
+            <img
+              class="absolute top-52 right-3 sm:top-56 sm:right-12"
+              src="/assets/paris-bg.png"
+              alt=""
+            />
+            <img
+              class="absolute bottom-0 right-0 sm:bottom-0 sm:right-0"
+              src="/assets/football-bg.png"
+              alt=""
+            />
+            <img
+              class="absolute bottom-0 right-0"
+              src="/assets/football.png"
+              alt=""
+            />
           </div>
         </div>
-        <div class="relative">
-          <img
-            class="absolute z-20 top-5 right-16 sm:top-10 sm:right-28"
-            src="/assets/messi-top.png"
-            alt=""
-          />
-          <img
-            class="absolute top-16 right-3 sm:top-20 sm:right-12"
-            src="/assets/messi-banner.png"
-            alt=""
-          />
-          <img
-            class="absolute top-52 right-3 sm:top-56 sm:right-12"
-            src="/assets/paris-bg.png"
-            alt=""
-          />
-          <img
-            class="absolute bottom-0 right-0 sm:bottom-0 sm:right-0"
-            src="/assets/football-bg.png"
-            alt=""
-          />
-          <img
-            class="absolute bottom-0 right-0"
-            src="/assets/football.png"
-            alt=""
-          />
+        <!-- Banner Section End -->
+      </header>
+      <!-- header -->
+      <main class="mt-16 w-10/12 mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-white mb-16">
+          <section class="sm:col-span-2 border-2 border-red-500">
+            <h1>player card</h1>
+            <!-- flex flex-col sm:flex-row -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <!-- card-1 start -->
+              <div class="card w-full bg-black shadow-xl">
+                <figure class="">
+                  <img
+                    src="/assets/card-1.png"
+                    alt="Shoes"
+                    class="w-full h-56"
+                  />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Lionel Messi</h2>
+                  <p><small>100 Goals</small> <small>120 Assist</small></p>
+                  <div class="card-actions">
+                    <button class="btn btn-primary" onclick="addToList(this)">
+                      Select
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- card-1 End -->
+
+              <!-- card-2 start -->
+              <div class="card w-full bg-black shadow-xl">
+                <figure class="">
+                  <img
+                    src="/assets/card-2.png"
+                    alt="Shoes"
+                    class="w-full h-56"
+                  />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Neymar Jr</h2>
+                  <p><small>90 Goals</small> <small>110 Assist</small></p>
+                  <div class="card-actions">
+                    <button class="btn btn-primary" onclick="addToList(this)">
+                      Select
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- card-2 End -->
+              <!-- card-3 start -->
+              <div class="card w-full bg-black shadow-xl">
+                <figure class="">
+                  <img
+                    src="/assets/card-3.png"
+                    alt="Shoes"
+                    class="w-full h-56"
+                  />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Kylian Mbappé</h2>
+                  <p><small>80 Goals</small> <small>100 Assist</small></p>
+                  <div class="card-actions">
+                    <button class="btn btn-primary" onclick="addToList(this)">
+                      Select
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- card-3 End -->
+              <!-- card-4 start -->
+              <div class="card w-full bg-black shadow-xl">
+                <figure class="">
+                  <img
+                    src="/assets/card-4.png"
+                    alt="Shoes"
+                    class="w-full h-56"
+                  />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Vítor Machado</h2>
+                  <p><small>75 Goals</small> <small>95 Assist</small></p>
+                  <div class="card-actions">
+                    <button class="btn btn-primary" onclick="addToList(this)">
+                      Select
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- card-4 End -->
+              <!-- card-5 start -->
+              <div class="card w-full bg-black shadow-xl">
+                <figure class="">
+                  <img
+                    src="/assets/card-5.png"
+                    alt="Shoes"
+                    class="w-full h-56"
+                  />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Sergio Ramos</h2>
+                  <p><small>70 Goals</small> <small>90 Assist</small></p>
+                  <div class="card-actions">
+                    <button class="btn btn-primary" onclick="addToList(this)">
+                      Select
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- card-5 End -->
+              <!-- card-6 start -->
+              <div class="card w-full bg-black shadow-xl">
+                <figure class="">
+                  <img
+                    src="/assets/card-6.png"
+                    alt="Shoes"
+                    class="w-full h-56"
+                  />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Renato Sanches</h2>
+                  <p><small>65 Goals</small> <small>90 Assist</small></p>
+                  <div class="card-actions">
+                    <button class="btn btn-primary" onclick="addToList(this)">
+                      Select
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- card-6 End -->
+              <!-- card-7 start -->
+              <div class="card w-full bg-black shadow-xl">
+                <figure class="">
+                  <img
+                    src="/assets/card-7.jpg"
+                    alt="Shoes"
+                    class="w-full h-56"
+                  />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Dani Alves</h2>
+                  <p><small>60 Goals</small> <small>70 Assist</small></p>
+                  <div class="card-actions">
+                    <button class="btn btn-primary" onclick="addToList(this)">
+                      Select
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- card-7 End -->
+              <!-- card-8 start -->
+              <div class="card w-full bg-black shadow-xl">
+                <figure class="">
+                  <img
+                    src="/assets/card-8.jpg"
+                    alt="Shoes"
+                    class="w-full h-56"
+                  />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Gabriel Jesus</h2>
+                  <p><small>58 Goals</small> <small>80 Assist</small></p>
+                  <div class="card-actions">
+                    <button class="btn btn-primary" onclick="addToList(this)">
+                      Select
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- card-8 End -->
+              <!-- card-9 start -->
+              <div class="card w-full bg-black shadow-xl">
+                <figure class="">
+                  <img
+                    src="/assets/card-9.jpg"
+                    alt="Shoes"
+                    class="w-full h-56"
+                  />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Hulk</h2>
+                  <p><small>50 Goals</small> <small>50 Assist</small></p>
+                  <div class="card-actions">
+                    <button class="btn btn-primary" onclick="addToList(this)">
+                      Select
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- card-9 End -->
+            </div>
+          </section>
+          <section class="border-2 border-yellow-400">
+            <div class="grid grid-cols-1 gap-4">
+              <div class="bg-black rounded-md">
+                <div class="">
+                  <h1 class="text-center font-bold text-2xl mt-6">Budget</h1>
+                  <img
+                    class="w-3/4 mx-auto"
+                    src="/assets/orange-underline.png"
+                    alt=""
+                  />
+                </div>
+                <ol class="p-8 list-decimal" id="player-list"></ol>
+              </div>
+              <div>2</div>
+            </div>
+          </section>
         </div>
-      </div>
-      <!-- Banner Section End -->
-    </header>
-    <!-- header -->
-    <main>
-      <section>player card</section>
-      <section>item card & calculation</section>
-    </main>
+      </main>
+    </div>
   </body>
 </html>
